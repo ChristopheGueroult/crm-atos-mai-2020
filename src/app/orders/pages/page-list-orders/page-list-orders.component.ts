@@ -17,11 +17,15 @@ export class PageListOrdersComponent implements OnInit, OnDestroy {
   public btnRoute: Btn;
   public btnHref: Btn;
   public btnAction: Btn;
+  public title: string;
+  public subtitle: string;
   public states = Object.values(StateOrder);
   // private sub: Subscription;
   constructor(private os: OrdersService) { }
 
   ngOnInit(): void {
+    this.title = 'Orders';
+    this.subtitle = 'All orders';
     this.btnRoute = {
       label: 'Add an order',
       route: 'add'

@@ -24,6 +24,7 @@
   "clients": [
     {
       "state": "Active",
+      "tva": 20,
       "id": 1,
       "name": "Christophe2",
       "ca": 12000,
