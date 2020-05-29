@@ -8,6 +8,7 @@ import { TableLightComponent } from './components/table-light/table-light.compon
 import { StateDirective } from './directives/state.directive';
 import { TotalPipe } from './pipes/total.pipe';
 import { TextModule } from '../text/text.module';
+import { IconsModule } from '../icons/icons.module';
 
 
 
@@ -17,8 +18,9 @@ import { TextModule } from '../text/text.module';
     CommonModule,
     RouterModule,
     TemplatesModule,
-    TextModule
+    TextModule,
+    IconsModule
   ],
-  exports: [TableLightComponent, BtnComponent, TotalPipe, StateDirective, TableDarkComponent, TemplatesModule, TextModule]
+  exports: [TableLightComponent, BtnComponent, TotalPipe, StateDirective, TableDarkComponent, TemplatesModule, TextModule, IconsModule]
 })
 export class SharedModule { }

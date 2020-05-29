@@ -1,4 +1,4 @@
-<app-template-a [title]="title" [subtitle]="subtitle">
+<app-template-a *ngIf="route.data | async as datas" [title]="datas.title" [subtitle]="datas.subtitle">
 
   <app-table-light *ngIf="collection$ | async as collection" [headers]="headers">
 
@@ -13,6 +13,9 @@
         <select (change)="changeState(item, $event)">
           <option *ngFor="let state of states" [value]="state" [selected]="state === item.state">{{ state }}</option>
         </select>
+      </td>
+      <td>
+        <app-icon-delete (click)="delete(item)"></app-icon-delete>
       </td>
     </tr>
 
